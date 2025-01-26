@@ -4,6 +4,7 @@ import org.nonreactive.model.Item;
 import org.nonreactive.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +17,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> getAllItems() {
-        return itemRepository.findAll();
+        return itemRepository.findAllWithDelay();
     }
 
     @Override
