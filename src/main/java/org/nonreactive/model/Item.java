@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "nonitems")
+@Table(name = "items")
 public class Item {
 
 
