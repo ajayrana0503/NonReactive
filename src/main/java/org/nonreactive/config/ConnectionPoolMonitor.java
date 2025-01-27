@@ -11,7 +11,7 @@ public class ConnectionPoolMonitor {
     @Autowired
     private HikariDataSource dataSource;
 
-    @Scheduled(fixedDelay = 1000) // every 1 seconds
+    @Scheduled(fixedDelay = 100) // every 1 seconds
     public void logConnectionPoolMetrics() {
         int idleConnections = dataSource.getHikariPoolMXBean().getIdleConnections();
         int activeConnections = dataSource.getHikariPoolMXBean().getActiveConnections();

@@ -8,7 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
-
-    @Query(value = "SELECT * FROM nonitems i, pg_sleep(2)", nativeQuery = true)
-    List<Item> findAllWithDelay();
 }

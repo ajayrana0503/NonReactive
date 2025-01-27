@@ -17,7 +17,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> getAllItems() {
-        return itemRepository.findAllWithDelay();
+        return itemRepository.findAll();
     }
 
     @Override
